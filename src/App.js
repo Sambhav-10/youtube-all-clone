@@ -31,7 +31,9 @@ function App() {
       <Provider store={store}>
         <Navbar />
         <RouterProvider router={approuter} />
-        <div className="">{/* <Sidebar /> */}</div>
+
+        
+        {/* <div className="">{ <Sidebar /> }</div> */}
       </Provider>
     </>
   );

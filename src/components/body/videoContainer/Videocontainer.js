@@ -14,19 +14,21 @@ const Videocontainer = () => {
   async function getvideos() {
     const data = await fetch(youtube_api);
     const responce = await data.json();
-    console.log(responce);
+
     setVideos(responce.items);
   }
   return (
     <>
-        <Sidebar/>
-
-    <div className="pt-5 w-full flex flex-wrap">
-      {videos.map((video) => {
-          return <Link to={"/watch?v=" + video.id}><VideoCart info={video} key={video.id} /></Link>;
+      <div className="pt-5  flex flex-wrap justify-around ">
+        {videos.map((video) => {
+          return (
+            <Link to={"/watch?v=" + video.id} className="my-2">
+              <VideoCart info={video} key={video.id} />
+            </Link>
+          );
         })}
-    </div>
-        </>
+      </div>
+    </>
   );
 };
 

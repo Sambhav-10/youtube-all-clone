@@ -17,10 +17,10 @@ const VideoCart = ({ info }) => {
   const { channelTitle,title,thumbnails } = snippet;
 
   return (
-    <div className="w-[300px]  h-[300px]  shadow-lg m-2">
-        <img className="w-[300px] h-[200px] " src={thumbnails.medium.url} alt="" />
-      <div>
-      <div>{channelTitle}</div>
+    <div className="w-80 flex-wrap h-80 shadow-lg">
+        <img className="w-80  " src={thumbnails.medium.url} alt="" />
+      <div className="p-2">
+      <div className="font-bold">{channelTitle}</div>
       <div>{title}</div>
       <div>views- {statistics.viewCount}</div>
 

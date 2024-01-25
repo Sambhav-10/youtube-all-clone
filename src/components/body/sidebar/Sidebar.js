@@ -6,7 +6,7 @@ const Sidebar = () => {
     const isManuOpen = useSelector((store) => store.nav.isManuOpen)
 
   return !isManuOpen ? null : (
-    <div className='w-[200px]  h-[90vh] fixed bg-slate-400 '>
+    <div className='w-52  h-[90vh]  '>
         <section className='p-1 '>
             <div className='flex items-center'>
                 <img className='w-1/3' src="https://endlessicons.com/wp-content/uploads/2012/11/home-icon-614x460.png" alt="" />
