@@ -1,7 +1,6 @@
 import { Provider } from "react-redux";
 import "./App.css";
 import Navbar from "./components/navbar/Navbar";
-import Sidebar from "./components/body/sidebar/Sidebar";
 import store from "./utils/store";
 import Body from "./components/body/Body";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
@@ -31,9 +30,6 @@ function App() {
       <Provider store={store}>
         <Navbar />
         <RouterProvider router={approuter} />
-
-        
-        {/* <div className="">{ <Sidebar /> }</div> */}
       </Provider>
     </>
   );
