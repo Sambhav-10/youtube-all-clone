@@ -53,7 +53,7 @@ const Navbar = () => {
     <nav className="flex h-20 w-full justify-between shadow-lg p-5">
       <div className="flex w-1/6 items-center">
         <img
-          className="w-[60px] h-[60px] cursor-pointer"
+          className="w-[50px] h-[50px] cursor-pointer"
           src="https://static.thenounproject.com/png/2292434-200.png"
           alt=""
           onClick={() => toggleMenuhandler()}
@@ -69,6 +69,7 @@ const Navbar = () => {
       <div className="r ">
         <div>
           <input
+         
             type="text"
             value={searchQuery}
             onChange={(e) => {
@@ -77,14 +78,19 @@ const Navbar = () => {
             }
             
             }
-            className="w-80 h-10 border border-gray-900 rounded-l-full px-4"
+            className="hidden md:inline w-32 md:w-80 h-10 border border-gray-900 rounded-l-full px-4"
             onFocus={() => setShowSuggention(true)}
             onBlur={() => setShowSuggention(false)}
             
           />
-          <button className="bg-gray-400 h-10 rounded-e-full p-2">
-            search
+          <button className="hidden  bg-gray-400 h-10 rounded-e-full p-2 md:flex justify-center items-center">
+          <img
+          className="w-[40px] h-[40px] "
+          src="https://png.pngtree.com/png-vector/20191110/ourmid/pngtree-avatar-icon-profile-icon-member-login-vector-isolated-png-image_1978396.jpg"
+          alt=""
+        />
           </button>
+         
         </div>
 
         {showsuggention ? (
@@ -103,11 +109,15 @@ const Navbar = () => {
       </div>
 
       <div className="flex w-1/6 align-middle items-center ">
+      <img src={"https://th.bing.com/th/id/OIP.sAzW-VJAXN6oJ3kLmRXEEAHaHa?rs=1&pid=ImgDetMain"} 
+        className="md:hidden w-[40px] h-[40px]"
+        alt="" />
         <img
           className="w-[40px] h-[40px] "
           src="https://png.pngtree.com/png-vector/20191110/ourmid/pngtree-avatar-icon-profile-icon-member-login-vector-isolated-png-image_1978396.jpg"
           alt=""
         />
+        
       </div>
     </nav>
   );

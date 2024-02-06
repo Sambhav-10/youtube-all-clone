@@ -19,18 +19,18 @@ const Body = () => {
 
   return (
     <>
-      <div className="flex w-full ">
+      <div className="flex w-full h-full ">
         <div >
           <Sidebar />
         </div>
 
-        <div className="w-full">
-          <div className=" flex h-12 gap-10 overflow-scroll  mt-4">
+        <div className="w-full ">
+          <div className="w-full h-16 md:h-12  flex  gap-10 overflow-scroll  my-4">
             {data.map((e, i) => {
               return <Button key={i} name={e} />;
             })}
           </div>
-          <div className="flex w-full">
+          <div className="flex">
             <Outlet />
           </div>
         </div>
