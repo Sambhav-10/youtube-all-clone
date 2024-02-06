@@ -59,11 +59,13 @@ const Navbar = () => {
           onClick={() => toggleMenuhandler()}
         />
      
+       <Link to={"/"}>
         <img
           className="w-[150px] h-[60px]"
           src="https://t3.ftcdn.net/jpg/03/00/38/90/360_F_300389025_b5hgHpjDprTySl8loTqJRMipySb1rO0I.jpg"
           alt=""
           />
+          </Link>
           
       </div>
       <div className="r ">
@@ -83,12 +85,8 @@ const Navbar = () => {
             onBlur={() => setShowSuggention(false)}
             
           />
-          <button className="hidden  bg-gray-400 h-10 rounded-e-full p-2 md:flex justify-center items-center">
-          <img
-          className="w-[40px] h-[40px] "
-          src="https://png.pngtree.com/png-vector/20191110/ourmid/pngtree-avatar-icon-profile-icon-member-login-vector-isolated-png-image_1978396.jpg"
-          alt=""
-        />
+          <button className="hidden md:inline bg-gray-400 h-10 rounded-e-full p-2">
+            search
           </button>
          
         </div>
